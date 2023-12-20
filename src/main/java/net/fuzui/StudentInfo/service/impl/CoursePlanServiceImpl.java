@@ -16,9 +16,9 @@ import java.util.Map;
  * @Package: net.fuzui.StudentInfo.service.impl
  * @ClassName: CoursePlanServiceImpl
  * @Description: 课程安排service具体实现类
- * @Author: 王泽
+ * @Author: admin
  * @CreateDate: 2019-04-10 16:03
- * @UpdateUser: 王泽
+ * @UpdateUser: admin
  * @UpdateDate: 2019-04-10 16:03
  * @UpdateRemark: 新建
  * @Version: 1.0

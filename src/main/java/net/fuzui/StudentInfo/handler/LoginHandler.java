@@ -30,9 +30,9 @@ import javax.servlet.http.HttpSession;
  * @Package: net.fuzui.StudentInfo.handler
  * @ClassName: AdminHandler
  * @Description: admin的handler层（servlet）
- * @Author: 王泽
+ * @Author: admin
  * @CreateDate: 2019-04-10 22:50
- * @UpdateUser: 王泽
+ * @UpdateUser: admin
  * @UpdateDate: 2019-04-10 22:50
  * @UpdateRemark: 新建
  * @Version: 1.0

@@ -14,9 +14,9 @@ import java.util.List;
  * @Package: net.fuzui.StudentInfo.service.impl
  * @ClassName: StudentTestApp
  * @Description: service层测试类
- * @Author: 王泽
+ * @Author: admin
  * @CreateDate: 2019-04-08 13:49
- * @UpdateUser: 王泽
+ * @UpdateUser: admin
  * @UpdateDate: 2019-04-08 13:49
  * @UpdateRemark: 新建
  * @Version: 1.0
@@ -65,7 +65,7 @@ public class StudentTestApp {
     public void insertTest() {
         Student student = new Student();
         student.setSid("201220122016");
-        student.setSname("王泽");
+        student.setSname("admin");
         student.setSidcard("140140199612122255");
         student.setSsex("男");
         student.setSpassword("123123");

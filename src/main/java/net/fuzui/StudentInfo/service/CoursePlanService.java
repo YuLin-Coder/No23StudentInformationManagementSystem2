@@ -12,9 +12,9 @@ import java.util.Map;
  * @Package: net.fuzui.StudentInfo.service
  * @ClassName: CoursePlanService
  * @Description: 课程安排service接口类
- * @Author: 王泽
+ * @Author: admin
  * @CreateDate: 2019-04-10 15:58
- * @UpdateUser: 王泽
+ * @UpdateUser: admin
  * @UpdateDate: 2019-04-10 15:58
  * @UpdateRemark: 新建
  * @Version: 1.0

@@ -28,9 +28,9 @@ import net.fuzui.StudentInfo.service.CourseService;
  * @Package: net.fuzui.StudentInfo.handler
  * @ClassName: CourseHandler
  * @Description: 课程handler类（servlet）
- * @Author: 王泽
+ * @Author: admin
  * @CreateDate: 2019年4月11日 下午4:13:55
- * @UpdateUser: 王泽
+ * @UpdateUser: admin
  * @UpdateDate: 2019年4月11日 下午4:13:55
  * @UpdateRemark: 新建
  * @Version: 1.0

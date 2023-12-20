@@ -12,9 +12,9 @@ import org.springframework.web.servlet.ModelAndView;
  * @Package: net.fuzui.StudentInfo.interceptor
  * @ClassName: TeacherLoginInterceptor
  * @Description: 教师登录拦截
- * @Author: 王泽
+ * @Author: admin
  * @CreateDate: 2019年4月12日 下午3:52:03
- * @UpdateUser: 王泽
+ * @UpdateUser: admin
  * @UpdateDate: 2019年4月12日 下午3:52:03
  * @UpdateRemark: 新建
  * @Version: 1.0

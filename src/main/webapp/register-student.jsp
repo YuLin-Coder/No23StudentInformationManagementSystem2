@@ -31,25 +31,22 @@
 <script type='text/javascript' src='/utils/scripts/particles.js'></script><link href="/utils/css/animate.css" rel="stylesheet"></head>
 
 <body><div id="particles-js"><canvas class="particles-js-canvas-el" width="1322" height="774" style="width: 100%; height: 100%;"></canvas></div>
-	<jsp:include page="adminLeft.jsp" />
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h5>添加学生</h5>
-				<form action="/AdminHandler/addStudent" method="post" name="form1">
+				<h5>学生注册</h5>
+				<form action="/RegisterHandler/addStudent" method="post" name="form1">
 					<div class="row">
 						<div class="col-md-6">
 							<h6>学号</h6>
 							<input type="text" name="sid" id="sid" class="form-control" oninput = "value=value.replace(/[^\d]/g,'')" maxlength="12"></input>
 							<span id="countsid" style="color: #ff0000;"></span>
 							<h6>姓名</h6>
-							<input type="text" name="sname" class="form-control" onkeyup="this.value=this.value.replace(/[^\u4e00-\u9fa5]/g,'')" maxlength="4"></input>
-							<h6>身份证号</h6>
-							<input type="text" name="sidcard" class="form-control" oninput = "value=value.replace(/[^\d]/g,'')" maxlength="16"></input>
+							<input type="text" id="sname" name="sname" class="form-control" onkeyup="this.value=this.value.replace(/[^\u4e00-\u9fa5]/g,'')" maxlength="4"></input>
 							<h6>性别</h6>
 
 							<label class="radio" for="radio1"> <input type="radio"
-								name="ssex" value="男" id="radio1" data-toggle="radio"
+								name="ssex" value="男" id="radio1" data-toggle="radio" checked
 								class="custom-radio"> <span class="icons"> <span
 									class="icon-unchecked"></span> <span class="icon-checked"></span>
 							</span> <font style="vertical-align: inherit;"> <font
@@ -65,15 +62,19 @@
 							</label>
 
 							<h6>密&nbsp;&nbsp;码</h6>
-							<input type="password" name="spassword" class="form-control" onkeyup="this.value=this.value.replace(/(^\s+)|(\s+$)/g,'');" maxlength="16"/>
+							<input type="password" id="spassword" name="spassword" class="form-control" onkeyup="this.value=this.value.replace(/(^\s+)|(\s+$)/g,'');" maxlength="16"/>
+							<h6>确认密码</h6>
+							<input type="password" id="spasswordre" name="spasswordre" class="form-control" onkeyup="this.value=this.value.replace(/(^\s+)|(\s+$)/g,'');" maxlength="16"/>
 						</div>
 						<div class="col-md-6">
+							<h6>身份证号</h6>
+							<input type="text" name="sidcard" class="form-control" oninput = "value=value.replace(/[^\d]/g,'')" maxlength="16"></input>
 							<h6>年龄</h6>
 							<input type="text" name="sage" class="form-control" maxlength="2"></input>
 							
 							<h6>学院</h6>
 							<select name="college"
-									class="form-control select select-primary select-block mbl" id="belongcoll">
+								class="form-control select select-primary select-block mbl" id="belongcoll">
 								<option value="">-请选择专业-</option>
 							</select>
 
@@ -82,7 +83,7 @@
 									class="form-control select select-primary select-block mbl" id="belongpro">
 								<option value="">-请选择学院-</option>
 							</select>
-							
+
 							<h6>班级</h6>
 							<select name="classr"
 								class="form-control select select-primary select-block mbl" id="belongcla">
@@ -92,7 +93,8 @@
 						</div>
 						<div class="col-md-12">
 							<br> <input type="submit"
-								class="btn btn-primary btn-wide login-btn" value="添加" />
+								class="btn btn-primary btn-wide login-btn" value="注册" />
+							<input type="button" value="返回登录" class="btn btn-primary btn-wide login-btn" onclick="window.location.href = '/'"/>
 						</div>
 					</div>
 				</form>
@@ -105,22 +107,41 @@
 
 
 <script type="text/javascript">
-    
 $("form").submit(function(){
   //当表单提交的时候，对字段验证，并根据需要放出提示
-  if($.trim($("#belongcoll").val())==""){
-      alert("学院不能为空");
-      return false;//终止表单提交
-      
-  }else if($.trim($("#belongpro").val())==""){
-      alert("专业不能为空");
-      return false;//终止表单提交
-      
-  }else if($.trim($("#belongcla").val())==""){
-      alert("班级不能为空");
-      return false;//终止表单提交
-      
-  }
+	if($.trim($("#sid").val())==""){
+		alert("学号不能为空");
+		return false;//终止表单提交
+	}
+	if($.trim($("#sname").val())==""){
+		alert("姓名不能为空");
+		return false;//终止表单提交
+	}
+	if($.trim($("#spassword").val())==""){
+		alert("密码不能为空");
+		return false;//终止表单提交
+	}
+
+	var spassword = $("#spassword").val();
+	var spasswordre = $("#spasswordre").val();
+	if (spassword !== spasswordre) {
+		alert("两次密码不一致");
+		return false;
+	}
+
+	if($.trim($("#belongcoll").val())==""){
+		alert("学院不能为空");
+		return false;//终止表单提交
+	}
+	if($.trim($("#belongpro").val())==""){
+		alert("专业不能为空");
+		return false;//终止表单提交
+	}
+	if($.trim($("#belongcla").val())==""){
+		alert("班级不能为空");
+		return false;//终止表单提交
+	}
+  return checkPwd();
 });
     
     

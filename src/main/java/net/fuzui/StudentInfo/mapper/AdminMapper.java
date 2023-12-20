@@ -1,5 +1,6 @@
 package net.fuzui.StudentInfo.mapper;
 
+import net.fuzui.StudentInfo.pojo.Student;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -7,9 +8,9 @@ import org.apache.ibatis.annotations.Param;
  * @Package: net.fuzui.StudentInfo.mapper
  * @ClassName: AdminMapper
  * @Description: 管理员数据访问层接口
- * @Author: 王泽
+ * @Author: admin
  * @CreateDate: 2019-04-09 21:59
- * @UpdateUser: 王泽
+ * @UpdateUser: admin
  * @UpdateDate: 2019-04-09 21:59
  * @UpdateRemark: 新建
  * @Version: 1.0
@@ -23,5 +24,10 @@ public interface AdminMapper {
      * @return
      */
     public String queryByNamePwd(@Param("aname") String aname, @Param("apassword") String apassword);
-
+    /**
+     *  添加管理员
+     *  @param aname   管理员账号（唯一）
+     *  @param apassword   密码
+     */
+    public int insert(@Param("aname") String aname, @Param("apassword") String apassword);
 }

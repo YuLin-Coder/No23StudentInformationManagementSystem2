@@ -11,9 +11,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @Package: net.fuzui.StudentInfo.service.impl
  * @ClassName: AdminTestApp
  * @Description: 管理员相关功能测试类
- * @Author: 王泽
+ * @Author: admin
  * @CreateDate: 2019-04-09 22:11
- * @UpdateUser: 王泽
+ * @UpdateUser: admin
  * @UpdateDate: 2019-04-09 22:11
  * @UpdateRemark: 新建
  * @Version: 1.0

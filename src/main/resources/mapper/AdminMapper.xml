@@ -8,5 +8,8 @@
     <select id="queryByNamePwd" resultType="java.lang.String">
 		select * from admin where Aname = #{aname} and Apassword= #{apassword}
 	</select>
-
+    <insert id="insert" parameterType="String">
+        insert into admin(aname,apassword)
+            value (#{aname}, #{apassword})
+    </insert>
 </mapper>

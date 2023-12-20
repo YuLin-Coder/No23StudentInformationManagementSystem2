@@ -1,14 +1,17 @@
 html, body {
 		width: 100%;
 		height: 100%;
+        position:absolute;
+        background-image: url(../image/bg.jpg);
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
 	}
 	
 	#particles-js {
 		position:absolute;
 	    width: 100%;
 	    height: 100%;
-	    /*background-color: #000;*/
-	    background-image: url(style.css);
 	    background-size: cover;
 	    background-position: 50% 50%;
 	    background-repeat: no-repeat;

@@ -232,8 +232,10 @@ body {
 								</div>
 							</div>
 
-							<input class="btn btn-primary btn-wide login-btn" value="LOGIN"
+							<input class="btn btn-primary btn-wide login-btn" value="登录"
 								type="submit" />
+							<input class="btn btn-primary btn-wide login-btn" value="注册"
+								type="button" onclick="registerHandler()"/>
 						</form>
 					</div>
 				</div>
@@ -245,7 +247,28 @@ body {
 		var useridEle = document.getElementById("userid");
 		var passwordEle = document.getElementById("password");
 		var roleRadio = document.getElementsByName("optionsRadios1");
+		/*
+                 * 点击注册执行的逻辑
+                 */
+		function registerHandler() {
+			var role = 'student';
 
+			for (var i = 0; i < roleRadio.length; i++) {
+				if (roleRadio[i].checked) {
+					role = roleRadio[i].value;
+				}
+			}
+
+			var action = null;
+			if (role == 'student') {
+				action = "/register-student.jsp";
+			} else if (role == 'teacher') {
+				action = "/register-teacher.jsp";
+			} else {
+				action = "/register-admin.jsp";
+			}
+			window.location.href = action;
+		}
 		/*
 		 * 点击登录执行的逻辑
 		 */

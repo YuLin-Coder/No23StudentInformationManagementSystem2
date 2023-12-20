@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
  * @Package: net.fuzui.StudentInfo.service.impl
  * @ClassName: AdminServiceImpl
  * @Description: 管理员service具体实现类
- * @Author: 王泽
+ * @Author: admin
  * @CreateDate: 2019-04-09 22:03
- * @UpdateUser: 王泽
+ * @UpdateUser: admin
  * @UpdateDate: 2019-04-09 22:03
  * @UpdateRemark: 新建
  * @Version: 1.0
@@ -31,5 +31,10 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public String queryByNamePwd(String aname, String apassword) {
         return adminMapper.queryByNamePwd(aname,apassword);
+    }
+
+    @Override
+    public int insert(String aname, String apassword) {
+        return adminMapper.insert(aname, apassword);
     }
 }

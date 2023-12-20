@@ -13,9 +13,9 @@ import net.fuzui.StudentInfo.pojo.Student;
 * @Package: net.fuzui.StudentInfo.mapper
 * @ClassName: StudentMapper
 * @Description: 学生数据访问层接口
-* @Author: 王泽
+* @Author: admin
 * @CreateDate: 2019-04-07 22:08
-* @UpdateUser: 王泽
+* @UpdateUser: admin
 * @UpdateDate: 2019-04-07 22:08
 * @UpdateRemark: 新建
 * @Version: 1.0

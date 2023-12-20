@@ -4,9 +4,9 @@ package net.fuzui.StudentInfo.pojo;
 * @Package: net.fuzui.StudentInfo.pojo
 * @ClassName: Student
 * @Description: 学生实体类
-* @Author: 王泽
+* @Author: admin
 * @CreateDate: 2019-04-06 16:11
-* @UpdateUser: 王泽
+* @UpdateUser: admin
 * @UpdateDate: 2019-04-06 16:11
 * @UpdateRemark: 新建
 * @Version: 1.0

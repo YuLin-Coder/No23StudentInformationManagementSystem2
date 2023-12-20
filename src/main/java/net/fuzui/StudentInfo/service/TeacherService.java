@@ -10,9 +10,9 @@ import java.util.List;
  * @Package: net.fuzui.StudentInfo.service
  * @ClassName: TeacherService
  * @Description: 教师service接口类
- * @Author: 王泽
+ * @Author: admin
  * @CreateDate: 2019-04-09 19:58
- * @UpdateUser: 王泽
+ * @UpdateUser: admin
  * @UpdateDate: 2019-04-09 19:58
  * @UpdateRemark: 新建
  * @Version: 1.0

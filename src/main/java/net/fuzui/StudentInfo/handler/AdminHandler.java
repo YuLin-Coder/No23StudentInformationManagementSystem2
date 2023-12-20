@@ -35,9 +35,9 @@ import javax.servlet.http.HttpSession;
  * @Package: net.fuzui.StudentInfo.handler
  * @ClassName: AdminHandler
  * @Description: admin的handler层（servlet）
- * @Author: 王泽
+ * @Author: admin
  * @CreateDate: 2019-04-10 22:50
- * @UpdateUser: 王泽
+ * @UpdateUser: admin
  * @UpdateDate: 2019-04-10 22:50
  * @UpdateRemark: 新建
  * @Version: 1.0
@@ -50,6 +50,8 @@ import javax.servlet.http.HttpSession;
 public class AdminHandler {
 
 
+    @Autowired
+	AdminService adminService;
     @Autowired
 	StudentService studentService;
 	@Autowired
@@ -125,6 +127,15 @@ public class AdminHandler {
  			model.addAttribute("student", student);
  			return "success";
  			// return "admin/addStudent";
+ 		} else {
+ 			return "fail";
+ 		}
+
+ 	}
+ 	@RequestMapping("/addAdmin")
+ 	public String addAdmin(String tname, String tpassword, Model model) {
+ 		if (adminService.insert(tname, tpassword) != 0) {
+ 			return "success";
  		} else {
  			return "fail";
  		}

@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-	particlesJS('particles-js', {
+	particlesJS('particles-js1', {
 		"particles" : {
 			"number" : {
 				"value" : 60,
